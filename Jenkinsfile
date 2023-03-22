@@ -3,13 +3,13 @@ pipeline{
     stages{
         stage("test"){
             steps{
-                 sh 'echo this is the test stage'
+                 sh 'echo "this is the test stage"'
             }
         }
 
-         stage("build"){
+         stage("production"){
             steps{
-               sh '''echo working'''
+               sh '''echo "working"'''
             }
         }
     }
