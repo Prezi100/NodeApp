@@ -1,5 +1,6 @@
 pipeline{
     agent any
+    tools{nodejs "nodejsname"}
     stages{
         stage("test"){
             steps{
@@ -9,7 +10,16 @@ pipeline{
 
          stage("production"){
             steps{
-               echo "working"
+                sh """
+                        rm -rf simple_node_js
+                        git clone https://github.com/monyslim/simple_node_app.git
+                        cd simple_node_js
+                        echo 'building the docker image'
+                        echo ' ---------------------'
+                        npm install
+                        npm run start
+                        echo '------done------'
+                    """
             }
         }
     }
