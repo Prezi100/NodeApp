@@ -13,7 +13,7 @@ pipeline{
                 sh """
                         rm -rf simple_node_app
                         git clone https://github.com/monyslim/simple_node_app.git
-                        cd simple_node_js
+                        cd simple_node_app
                         echo 'building the docker image'
                         echo ' ---------------------'
                         npm install
