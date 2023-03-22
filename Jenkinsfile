@@ -17,7 +17,7 @@ pipeline{
                         echo 'building the docker image'
                         echo ' ---------------------'
                         npm install
-                        npm run start
+                        npm run bere
                         echo '------done------'
                     """
             }
