@@ -11,7 +11,7 @@ pipeline{
          stage("production"){
             steps{
                 sh """
-                        rm -rf simple_node_js
+                        rm -rf simple_node_app
                         git clone https://github.com/monyslim/simple_node_app.git
                         cd simple_node_js
                         echo 'building the docker image'
